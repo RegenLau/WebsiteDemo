@@ -1753,7 +1753,12 @@
         const observer = new IntersectionObserver((entries, observer) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
+              // 移除初始的 opacity-0
+              entry.target.classList.remove('opacity-0');
+              // 添加动画类
               entry.target.classList.add('animate-fade-in');
+              // 确保动画结束后元素保持可见
+              entry.target.style.opacity = '1';
               observer.unobserve(entry.target);
             }
           });
@@ -1761,6 +1766,7 @@
 
         // 对特定的元素应用滚动动画
         document.querySelectorAll('.hover-card, .rounded-xl img').forEach(el => {
+          // 添加初始的不透明度类
           el.classList.add('opacity-0');
           observer.observe(el);
         });
