@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>精准洞察 - 专业市场研究与数据分析</title>
+    <meta
+      name="description"
+      content="精准洞察是领先的市场调研公司，提供全方位的市场分析、消费者行为研究和数据驱动的商业决策支持。"
+    />
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 图标 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 引入 Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // 设置 Tailwind 配置
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              primary: {
+                50: '#f0f7ff',
+                100: '#e0efff',
+                200: '#c0dfff',
+                300: '#90c9ff',
+                400: '#5aa6ff',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+              },
+              accent: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+              },
+            },
+            boxShadow: {
+              smooth: '0 4px 20px -2px rgba(0,0,0,0.1)',
+              'smooth-lg': '0 10px 30px -3px rgba(0,0,0,0.1)',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      /* 基础样式 */
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      /* 图表样式 */
+      .chart-bar {
+        height: 12px;
+        border-radius: 6px;
+        transition: width 1s ease-in-out;
+      }
+
+      /* 卡片悬停效果 */
+      .hover-card {
+        transition: all 0.3s ease;
+      }
+
+      .hover-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* 深色模式调整 */
+      .dark .invert-in-dark {
+        filter: invert(1);
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300"
+  >
+    <!-- 导航栏 -->
+    <header
+      class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="#" class="flex items-center">
+                <span class="text-primary-600 dark:text-primary-400 text-2xl font-bold">
+                  <i class="fas fa-chart-line mr-2"></i>
+                  精准洞察
+                </span>
+              </a>
+            </div>
+            <div class="hidden md:block ml-10">
+              <div class="flex items-center space-x-4">
+                <a
+                  href="#about"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  关于我们
+                </a>
+                <a
+                  href="#services"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  服务项目
+                </a>
+                <a
+                  href="#methodology"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  研究方法
+                </a>
+                <a
+                  href="#cases"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  成功案例
+                </a>
+                <a
+                  href="#team"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  团队介绍
+                </a>
+                <a
+                  href="#contact"
+                  class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  联系我们
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-full text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              <svg
+                id="theme-toggle-dark-icon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg
+                id="theme-toggle-light-icon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <div class="ml-4 md:hidden">
+              <button
+                type="button"
+                id="mobile-menu-button"
+                class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="hidden md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a
+              href="#about"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              关于我们
+            </a>
+            <a
+              href="#services"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              服务项目
+            </a>
+            <a
+              href="#methodology"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              研究方法
+            </a>
+            <a
+              href="#cases"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              成功案例
+            </a>
+            <a
+              href="#team"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              团队介绍
+            </a>
+            <a
+              href="#contact"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              联系我们
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero 区域 -->
+    <section
+      class="relative bg-gradient-to-br from-primary-600 to-primary-800 dark:from-primary-800 dark:to-primary-900 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 opacity-20">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-repeat"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');
+          "
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight"
+            >
+              数据驱动
+              <br />
+              <span class="text-primary-200">决策未来</span>
+            </h1>
+            <p class="mt-6 text-xl text-primary-100 max-w-lg text-balance">
+              精准洞察是领先的市场调研机构，我们通过深入分析和前沿方法论，帮助企业解锁市场潜力，做出明智决策。
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-800 bg-white hover:bg-primary-50 transition-colors shadow-lg"
+              >
+                <i class="fas fa-handshake mr-2"></i>
+                预约咨询
+              </a>
+              <a
+                href="#services"
+                class="inline-flex items-center justify-center px-6 py-3 border border-primary-200 text-base font-medium rounded-md text-white hover:bg-primary-700 hover:border-primary-300 transition-colors"
+              >
+                <i class="fas fa-arrow-right mr-2"></i>
+                了解服务
+              </a>
+            </div>
+          </div>
+          <div class="animate-fade-in relative hidden lg:block">
+            <div class="relative">
+              <div
+                class="absolute -top-16 -right-16 w-64 h-64 bg-accent-400 dark:bg-accent-500 rounded-full opacity-20 blur-3xl"
+              ></div>
+              <div
+                class="relative bg-white dark:bg-gray-800 rounded-lg shadow-smooth-lg p-6 rotate-3 transform hover:rotate-0 transition-transform duration-500"
+              >
+                <div class="flex justify-between items-center mb-4">
+                  <div class="text-lg font-semibold text-gray-800 dark:text-white">
+                    市场份额分析
+                  </div>
+                  <div class="flex space-x-1">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>品牌A</span>
+                      <span>38%</span>
+                    </div>
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div class="chart-bar bg-primary-500" style="width: 38%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>品牌B</span>
+                      <span>27%</span>
+                    </div>
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div class="chart-bar bg-accent-500" style="width: 27%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>品牌C</span>
+                      <span>21%</span>
+                    </div>
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div class="chart-bar bg-green-500" style="width: 21%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>其他</span>
+                      <span>14%</span>
+                    </div>
+                    <div class="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div class="chart-bar bg-gray-500" style="width: 14%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"
+        ></div>
+      </div>
+    </section>
+
+    <!-- 公司统计数据 -->
+    <section class="bg-white dark:bg-gray-900 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div class="text-center animate-slide-up">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">
+              500+
+            </div>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">成功项目</p>
+          </div>
+          <div class="text-center animate-slide-up" style="animation-delay: 0.1s">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">
+              98%
+            </div>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">客户满意度</p>
+          </div>
+          <div class="text-center animate-slide-up" style="animation-delay: 0.2s">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">
+              25+
+            </div>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">专业分析师</p>
+          </div>
+          <div class="text-center animate-slide-up" style="animation-delay: 0.3s">
+            <div class="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400">
+              15年
+            </div>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">行业经验</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            关于精准洞察
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            作为市场调研和数据分析领域的先驱，我们致力于通过精准的数据洞察，助力企业优化决策流程。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="relative rounded-xl overflow-hidden shadow-smooth">
+              <img
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="团队讨论数据分析结果"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">我们的故事</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              精准洞察成立于2009年，由一群热衷于数据分析和市场研究的专业人士创立。多年来，我们不断完善研究方法和技术，建立了一支由市场分析师、数据科学家和行业专家组成的精英团队。
+            </p>
+            <p class="text-gray-600 dark:text-gray-300">
+              我们的使命是通过科学的市场研究方法，为企业提供清晰的行业洞察和消费者理解，推动业务增长和创新。
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white pt-4">核心优势</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-6 w-6 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mt-1"
+                >
+                  <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                </div>
+                <p class="ml-3 text-gray-600 dark:text-gray-300">
+                  专业的跨行业研究经验，覆盖零售、科技、医疗、金融等多个领域
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-6 w-6 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mt-1"
+                >
+                  <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                </div>
+                <p class="ml-3 text-gray-600 dark:text-gray-300">
+                  结合定量与定性研究方法，提供全面深入的市场洞察
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-6 w-6 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mt-1"
+                >
+                  <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                </div>
+                <p class="ml-3 text-gray-600 dark:text-gray-300">
+                  先进的数据分析技术，包括AI辅助分析和预测模型
+                </p>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="flex-shrink-0 h-6 w-6 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mt-1"
+                >
+                  <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                </div>
+                <p class="ml-3 text-gray-600 dark:text-gray-300">
+                  定制化解决方案，根据客户需求提供个性化的研究策略
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section id="services" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            我们的服务
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            全方位市场研究与数据分析服务，助您在复杂多变的市场环境中保持竞争优势
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <!-- 服务项目 1 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-chart-pie text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">市场规模与趋势分析</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              通过深入研究行业数据，评估市场规模、增长潜力和发展趋势，为企业战略决策提供依据。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                市场规模测算与预测
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                行业发展趋势分析
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                细分市场机会挖掘
+              </li>
+            </ul>
+          </div>
+
+          <!-- 服务项目 2 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-users text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">消费者研究</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              了解目标受众的需求、偏好和行为模式，为产品开发和营销策略提供精准指导。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                消费者行为分析
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                焦点小组
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                用户体验测试
+              </li>
+            </ul>
+          </div>
+
+          <!-- 服务项目 3 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-search text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">竞争对手分析</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              全面评估竞争环境，识别竞争对手的优势、劣势和战略布局，帮助企业制定差异化策略。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                市场份额分析
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                竞品定位研究
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                SWOT战略分析
+              </li>
+            </ul>
+          </div>
+
+          <!-- 服务项目 4 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-bullhorn text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">品牌研究与策略</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              评估品牌资产和市场认知，制定有效的品牌定位和传播策略，增强品牌影响力。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                品牌健康度评估
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                品牌形象测试
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                传播效果监测
+              </li>
+            </ul>
+          </div>
+
+          <!-- 服务项目 5 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-globe text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">国际市场进入策略</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              为企业提供海外市场评估、文化差异分析和本地化策略，降低国际化风险。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                目标市场评估
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                跨文化消费者研究
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                入市路径规划
+              </li>
+            </ul>
+          </div>
+
+          <!-- 服务项目 6 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-xl shadow-smooth hover-card p-6 border border-gray-100 dark:border-gray-700"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-5"
+            >
+              <i class="fas fa-lightbulb text-xl text-primary-600 dark:text-primary-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">创新与产品研发</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              通过市场需求洞察，指导产品研发方向，评估新产品市场潜力和接受度。
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                概念测试与优化
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                产品原型评估
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-angle-right text-primary-500 mr-2"></i>
+                上市前测试分析
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-lg"
+          >
+            <i class="fas fa-calendar-check mr-2"></i>
+            预约服务咨询
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 研究方法 -->
+    <section id="methodology" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            我们的研究方法
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            精准洞察采用科学、系统的研究方法，确保数据的准确性和研究结果的可靠性
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">多元化的研究方法</h3>
+
+            <div class="space-y-8">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white"
+                  >
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium text-gray-900 dark:text-white">定量研究</h4>
+                  <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    通过大样本问卷调查、线上调研面板及销售数据分析等方法获取客观、可测量的研究数据，提供统计验证的市场洞察。
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white"
+                  >
+                    <i class="fas fa-comments"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium text-gray-900 dark:text-white">定性研究</h4>
+                  <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    通过深度访谈、焦点小组讨论和用户行为观察等方法，深入理解消费者的需求动机、情感反应和决策过程。
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white"
+                  >
+                    <i class="fas fa-brain"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium text-gray-900 dark:text-white">智能数据分析</h4>
+                  <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    运用先进的人工智能和机器学习技术，从大数据中挖掘市场趋势和消费者行为模式，提供前瞻性洞察。
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white"
+                  >
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium text-gray-900 dark:text-white">线上行为追踪</h4>
+                  <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    通过网站分析、社交媒体监测和电子商务数据分析，全面了解消费者的数字化行为和线上偏好。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="rounded-xl overflow-hidden shadow-smooth">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="团队讨论研究方法"
+                class="w-full h-auto"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-300 dark:bg-accent-700 rounded-full opacity-20 blur-2xl"
+            ></div>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white text-center mb-10">
+            我们的研究流程
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- 步骤 1 -->
+            <div class="relative">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-4 relative z-10"
+                >
+                  <span class="text-xl font-bold text-primary-600 dark:text-primary-400">01</span>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">需求确认</h4>
+                <p class="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  深入了解客户业务需求，明确研究目标和范围
+                </p>
+              </div>
+              <div
+                class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary-200 dark:bg-primary-800 transform -translate-x-8"
+              ></div>
+            </div>
+
+            <!-- 步骤 2 -->
+            <div class="relative">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-4 relative z-10"
+                >
+                  <span class="text-xl font-bold text-primary-600 dark:text-primary-400">02</span>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">研究设计</h4>
+                <p class="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  制定最优研究方法和抽样方案，确保数据代表性
+                </p>
+              </div>
+              <div
+                class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary-200 dark:bg-primary-800 transform -translate-x-8"
+              ></div>
+            </div>
+
+            <!-- 步骤 3 -->
+            <div class="relative">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-4 relative z-10"
+                >
+                  <span class="text-xl font-bold text-primary-600 dark:text-primary-400">03</span>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">数据收集</h4>
+                <p class="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  执行调研工作，严格质量控制，确保数据可靠性
+                </p>
+              </div>
+              <div
+                class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary-200 dark:bg-primary-800 transform -translate-x-8"
+              ></div>
+            </div>
+
+            <!-- 步骤 4 -->
+            <div class="relative">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-4 relative z-10"
+                >
+                  <span class="text-xl font-bold text-primary-600 dark:text-primary-400">04</span>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">分析洞察</h4>
+                <p class="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  运用专业分析工具和方法，从数据中提炼关键洞察
+                </p>
+              </div>
+              <div
+                class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-primary-200 dark:bg-primary-800 transform -translate-x-8"
+              ></div>
+            </div>
+
+            <!-- 步骤 5 -->
+            <div>
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-4"
+                >
+                  <span class="text-xl font-bold text-primary-600 dark:text-primary-400">05</span>
+                </div>
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-2">报告与建议</h4>
+                <p class="text-center text-gray-600 dark:text-gray-300 text-sm">
+                  提供清晰的研究报告和可执行的策略建议
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="cases" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            成功案例
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            我们帮助众多知名企业通过数据洞察制定战略，实现业务增长
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 案例 1 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card border border-gray-100 dark:border-gray-700"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="领先电子消费品牌市场拓展"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span
+                  class="bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  消费电子
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                领先电子消费品牌市场拓展
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                帮助国际电子品牌通过消费者深度研究，发现中国市场独特需求，成功研发本地化产品，两年内市场份额增加15%。
+              </p>
+              <div class="flex items-center text-primary-600 dark:text-primary-400 font-medium">
+                <span>阅读详情</span>
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 案例 2 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card border border-gray-100 dark:border-gray-700"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="金融科技创新产品研究"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span
+                  class="bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  金融科技
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                金融科技创新产品研究
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                为领先金融科技公司提供用户需求分析和产品概念测试，优化数字钱包设计，使用户满意度提升40%，活跃用户增长35%。
+              </p>
+              <div class="flex items-center text-primary-600 dark:text-primary-400 font-medium">
+                <span>阅读详情</span>
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 案例 3 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card border border-gray-100 dark:border-gray-700"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1607004468138-e7e23ea26947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="零售连锁店消费者旅程优化"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span
+                  class="bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  零售
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                零售连锁店消费者旅程优化
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                通过全渠道消费者旅程分析，帮助全国连锁零售企业识别服务痛点，重塑线上线下体验，提升转化率22%和复购率31%。
+              </p>
+              <div class="flex items-center text-primary-600 dark:text-primary-400 font-medium">
+                <span>阅读详情</span>
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-6 py-3 border border-primary-500 text-base font-medium rounded-md text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/50 transition-colors"
+          >
+            查看更多案例
+            <i class="fas fa-long-arrow-alt-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden relative">
+      <div class="absolute inset-0 z-0 opacity-10">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-repeat"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'24\' height=\'24\' viewBox=\'0 0 24 24\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M10,17.3 L7.7,15 L5.4,17.3 L4,15.9 L6.3,13.6 L4,11.3 L5.4,9.9 L7.7,12.2 L10,9.9 L11.4,11.3 L9.1,13.6 L11.4,15.9 L10,17.3 Z M0,13.6 L2.3,11.3 L0,9 L1.4,7.6 L3.7,9.9 L6,7.6 L7.4,9 L5.1,11.3 L7.4,13.6 L6,15 L3.7,12.7 L1.4,15 L0,13.6 Z\' fill=\'%23000000\' fill-opacity=\'0.2\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');
+          "
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            客户评价
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            听听我们的客户如何评价精准洞察的专业服务
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <!-- 评价 1 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-smooth hover-card border border-gray-200 dark:border-gray-700"
+          >
+            <div class="text-accent-500 mb-4">
+              <i class="fas fa-quote-left text-3xl opacity-50"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              精准洞察的研究方法非常专业，通过深入的消费者分析，帮助我们发现了关键产品机会。团队响应迅速，报告见解独到，让我们省去了很多试错成本。
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full object-cover mr-4"
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+                alt="张女士头像"
+              />
+              <div>
+                <div class="font-medium text-gray-900 dark:text-white">张女士</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">某电子消费品牌市场总监</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 评价 2 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-smooth hover-card border border-gray-200 dark:border-gray-700"
+          >
+            <div class="text-accent-500 mb-4">
+              <i class="fas fa-quote-left text-3xl opacity-50"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              我们与精准洞察合作开展了多个市场研究项目，他们的分析总是精确且有洞察力。最近一次的竞争对手分析帮助我们重新定位产品线，取得了非常显著的成效。
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full object-cover mr-4"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+                alt="王先生头像"
+              />
+              <div>
+                <div class="font-medium text-gray-900 dark:text-white">王先生</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">某科技公司首席运营官</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 评价 3 -->
+          <div
+            class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-smooth hover-card border border-gray-200 dark:border-gray-700"
+          >
+            <div class="text-accent-500 mb-4">
+              <i class="fas fa-quote-left text-3xl opacity-50"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              作为一家初创企业，我们需要快速了解市场状况。精准洞察提供的研究既全面又实用，尤其是他们的用户画像分析，帮助我们更精准地定位目标客户群体。
+            </p>
+            <div class="flex items-center">
+              <img
+                class="w-12 h-12 rounded-full object-cover mr-4"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80"
+                alt="李女士头像"
+              />
+              <div>
+                <div class="font-medium text-gray-900 dark:text-white">李女士</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">某金融科技创业公司CEO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16">
+          <div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png"
+              alt="Google"
+              class="h-6 md:h-8 invert-in-dark"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/202px-Apple_logo_black.svg.png"
+              alt="Apple"
+              class="h-8 md:h-10 invert-in-dark"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png"
+              alt="Netflix"
+              class="h-6 md:h-8 invert-in-dark"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png"
+              alt="Amazon"
+              class="h-6 md:h-8 invert-in-dark"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/BBVA_2019.svg/320px-BBVA_2019.svg.png"
+              alt="BBVA"
+              class="h-6 md:h-8 invert-in-dark"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png"
+              alt="Microsoft"
+              class="h-6 md:h-8 invert-in-dark"
+            />
+          </div>
+          <p class="text-center text-gray-500 dark:text-gray-400 mt-8">
+            这些都是信任我们的部分客户
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section id="team" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            我们的团队
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            专业、经验丰富的研究团队，为您提供最优质的市场洞察
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- 团队成员 1 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="陈志远"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">陈志远</h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-4">创始人 & CEO</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                拥有20年市场研究经验，曾任国际咨询公司亚太区研究总监，专注于技术和消费品领域研究。
+              </p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 团队成员 2 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="林美玲"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">林美玲</h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-4">研究总监</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                统计学博士，15年定量研究经验，擅长大数据分析和预测建模，曾主导多个国际品牌市场进入策略研究。
+              </p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 团队成员 3 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="王建国"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">王建国</h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-4">数据科学主管</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                人工智能专家，专注于自然语言处理和机器学习技术在市场研究中的应用，曾在硅谷科技公司担任数据科学家。
+              </p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 团队成员 4 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-smooth hover-card"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="赵敏"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">赵敏</h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-4">定性研究专家</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                心理学背景，擅长消费者洞察和用户体验研究，对零售和快消品行业有深入研究，曾主导多个品牌形象提升项目。
+              </p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 dark:text-white">
+            联系我们
+          </h2>
+          <div class="mt-2 h-1 w-24 bg-primary-500 mx-auto"></div>
+          <p class="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-balance">
+            无论您有任何问题或需要咨询，我们的团队随时为您提供帮助
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
+                    姓名
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 transition-colors"
+                    placeholder="您的姓名"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
+                    邮箱
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 transition-colors"
+                    placeholder="您的邮箱"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="company"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  公司
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 transition-colors"
+                  placeholder="您的公司名称"
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  感兴趣的服务
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 transition-colors"
+                >
+                  <option value="">请选择服务类型</option>
+                  <option value="market-analysis">市场规模与趋势分析</option>
+                  <option value="consumer-research">消费者研究</option>
+                  <option value="competitor-analysis">竞争对手分析</option>
+                  <option value="brand-research">品牌研究与策略</option>
+                  <option value="international-market">国际市场进入策略</option>
+                  <option value="innovation">创新与产品研发</option>
+                  <option value="other">其他服务</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
+                  咨询内容
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 transition-colors"
+                  placeholder="请简要描述您的需求..."
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full py-3 px-6 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg"
+                >
+                  <i class="fas fa-paper-plane mr-2"></i>
+                  提交咨询
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="order-first lg:order-last">
+            <div
+              class="bg-white dark:bg-gray-900 rounded-xl shadow-smooth p-8 border border-gray-200 dark:border-gray-700"
+            >
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">联系方式</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-medium text-gray-900 dark:text-white">办公地点</h4>
+                    <p class="mt-1 text-gray-600 dark:text-gray-300">
+                      上海市浦东新区张江高科技园区
+                      <br />
+                      博云路2号精准大厦15层
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center"
+                    >
+                      <i class="fas fa-phone-alt text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-medium text-gray-900 dark:text-white">联系电话</h4>
+                    <p class="mt-1 text-gray-600 dark:text-gray-300">
+                      +86 21 5888 XXXX
+                      <br />
+                      周一至周五 9:00-18:00
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 mt-1">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center"
+                    >
+                      <i class="fas fa-envelope text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-medium text-gray-900 dark:text-white">电子邮箱</h4>
+                    <p class="mt-1 text-gray-600 dark:text-gray-300">
+                      info@precisioninsight.cn
+                      <br />
+                      service@precisioninsight.cn
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-4">关注我们</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    <i class="fab fa-weixin"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    <i class="fab fa-weibo"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <!-- 公司简介 -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-white">精准洞察</h4>
+            <p class="text-gray-400 mb-6">
+              专业的市场调研与数据分析公司，致力于为企业提供精准的市场洞察和有价值的决策支持。
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-weixin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-weibo"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 快速链接 -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-white">快速链接</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#about" class="text-gray-400 hover:text-white transition-colors">
+                  关于我们
+                </a>
+              </li>
+              <li>
+                <a href="#services" class="text-gray-400 hover:text-white transition-colors">
+                  服务项目
+                </a>
+              </li>
+              <li>
+                <a href="#methodology" class="text-gray-400 hover:text-white transition-colors">
+                  研究方法
+                </a>
+              </li>
+              <li>
+                <a href="#cases" class="text-gray-400 hover:text-white transition-colors">
+                  成功案例
+                </a>
+              </li>
+              <li>
+                <a href="#team" class="text-gray-400 hover:text-white transition-colors">
+                  团队介绍
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
+                  联系我们
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 研究领域 -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-white">研究领域</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">消费电子</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">零售与电商</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">金融科技</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">医疗健康</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">汽车与出行</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">快速消费品</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 联系方式 -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-white">联系方式</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-400"></i>
+                <span class="text-gray-400">
+                  上海市浦东新区张江高科技园区
+                  <br />
+                  博云路2号精准大厦15层
+                </span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-primary-400"></i>
+                <span class="text-gray-400">+86 21 5888 XXXX</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                <span class="text-gray-400">info@precisioninsight.cn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-8 border-t border-gray-800 text-center">
+          <p class="text-gray-500 text-sm">© 2023 精准洞察市场研究公司 版权所有</p>
+          <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">隐私政策</a>
+            <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">使用条款</a>
+            <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">网站地图</a>
+          </div>
+          <div class="mt-6">
+            <p class="text-gray-600 text-sm">
+              作者:
+              <a
+                href="https://github.com/marketresearch"
+                target="_blank"
+                class="text-primary-400 hover:underline"
+              >
+                精准洞察团队
+              </a>
+              |
+              <a
+                href="https://github.com/marketresearch"
+                target="_blank"
+                class="text-gray-500 hover:text-gray-400"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              |
+              <a
+                href="https://twitter.com/marketresearch"
+                target="_blank"
+                class="text-gray-500 hover:text-gray-400"
+              >
+                <i class="fab fa-twitter"></i>
+                Twitter
+              </a>
+              |
+              <a
+                href="https://linkedin.com/company/marketresearch"
+                target="_blank"
+                class="text-gray-500 hover:text-gray-400"
+              >
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-primary-600 text-white shadow-lg opacity-0 invisible transition-all duration-300 flex items-center justify-center hover:bg-primary-700 focus:outline-none"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+      // 深色模式切换
+      document.addEventListener('DOMContentLoaded', function () {
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // 如果用户已经设置了主题偏好，则使用
+        if (
+          localStorage.getItem('color-theme') === 'dark' ||
+          (!('color-theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+          themeToggleLightIcon.classList.remove('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        // 监听主题切换按钮点击
+        themeToggleBtn.addEventListener('click', function () {
+          // 切换图标
+          themeToggleDarkIcon.classList.toggle('hidden');
+          themeToggleLightIcon.classList.toggle('hidden');
+
+          // 切换主题
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+          }
+        });
+
+        // 移动端菜单功能
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // 关闭移动端菜单当点击链接
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
+          } else {
+            backToTopButton.classList.remove('opacity-100', 'visible');
+            backToTopButton.classList.add('opacity-0', 'invisible');
+          }
+        });
+
+        backToTopButton.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        });
+
+        // 图表动画
+        function animateCharts() {
+          const chartBars = document.querySelectorAll('.chart-bar');
+          chartBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 300);
+          });
+        }
+
+        // 延迟执行图表动画
+        setTimeout(animateCharts, 1000);
+
+        // 滚动动画
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fade-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // 对特定的元素应用滚动动画
+        document.querySelectorAll('.hover-card, .rounded-xl img').forEach(el => {
+          el.classList.add('opacity-0');
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>
